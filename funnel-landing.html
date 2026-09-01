@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Training — The Take Charge Method</title>
+<meta name="description" content="A free training on the mobility-first sequence behind Take Charge coaching — correction first, then strength that lasts.">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* ---------- Funnel landing extras ---------- */
+  .funnel-header .wrap { justify-content: center; }
+
+  .covers {
+    max-width: 760px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+  }
+  .covers li {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 18px;
+    padding: 20px 0;
+    border-top: 1px solid var(--border);
+  }
+  .covers li:first-child { border-top: none; }
+  .covers .tick {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--panel);
+    border: 2px solid var(--accent);
+    color: var(--accent-deep);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+  }
+  .covers h3 { margin: 0 0 4px; font-size: 1.15rem; }
+  .covers p { margin: 0; color: var(--ink-soft); font-size: 0.98rem; }
+
+  .funnel-cta { text-align: center; margin-top: 44px; }
+  .funnel-cta .btn { font-size: 1.05rem; padding: 15px 34px; }
+  .funnel-cta .small { margin-top: 14px; }
+
+  /* ---------- Lead modal ---------- */
+  .lead-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(43, 36, 32, 0.62);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    z-index: 100;
+  }
+  .lead-overlay.open { display: flex; }
+
+  .lead-modal {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    max-width: 420px;
+    width: 100%;
+    padding: 34px 30px 30px;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(43, 36, 32, 0.25);
+  }
+  .lead-modal h2 { font-size: 1.5rem; margin-bottom: 6px; }
+  .lead-modal p.small { margin-bottom: 22px; }
+
+  .lead-close {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: var(--ink-soft);
+    cursor: pointer;
+    padding: 4px;
+  }
+  .lead-close:hover { color: var(--accent-deep); }
+
+  .lead-field { margin-bottom: 16px; }
+  .lead-field label {
+    display: block;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+  .lead-field input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: #fff;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1rem;
+    color: var(--ink);
+  }
+  .lead-field input:focus {
+    outline: 2px solid var(--accent-deep);
+    outline-offset: 1px;
+    border-color: var(--accent-deep);
+  }
+  .lead-modal .btn { width: 100%; margin-top: 6px; padding: 14px; font-size: 1rem; }
+  .lead-error {
+    color: var(--accent-deep);
+    font-size: 0.85rem;
+    margin: 0 0 12px;
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+<header class="site funnel-header">
+  <div class="wrap nav-row">
+    <a href="index.html" class="logo">Take Charge</a>
+  </div>
+</header>
+
+<section class="hero" style="padding-bottom: 24px;">
+  <div class="wrap">
+    <h1 style="max-width: 20ch; margin-left: auto; margin-right: auto; text-align: center;">Why throwing exercises at a painful joint keeps failing — and what to do instead.</h1>
+    <p class="hero-sub" style="max-width: 60ch; margin: 0 auto; text-align: center;">Most fitness plans hand you a workout schedule on day one. We don't. If your knee, hip, or lower back has been hurting for months or years, throwing exercises at it isn't strength training — it's a gamble. This sequence exists because we've seen that gamble fail too many times before it ever gets a chance to work.</p>
+  </div>
+</section>
+
+<section style="padding-top: 0;">
+  <div class="wrap">
+    <div class="section-head center" style="margin: 0 auto 36px;">
+      <h2>What the free training covers</h2>
+    </div>
+
+    <ul class="covers">
+      <li>
+        <span class="tick">1</span>
+        <div>
+          <h3>Mobility assessment &amp; correction</h3>
+          <p>How to find out why your body has been talking to you — which joints have lost range, which movements are compensating, and where the actual problem is versus where the pain shows up. Correction comes before anything else.</p>
+        </div>
+      </li>
+      <li>
+        <span class="tick">2</span>
+        <div>
+          <h3>Foundational strength</h3>
+          <p>Once the joint moves the way it should, how to build the strength that protects it — slowly, deliberately, without shortcuts. This is the phase most programs skip entirely.</p>
+        </div>
+      </li>
+      <li>
+        <span class="tick">3</span>
+        <div>
+          <h3>Progressive overload — done safely</h3>
+          <p>Only now do you chase real strength numbers. A joint that can handle load is a joint that can actually get stronger — not one more injury waiting to happen.</p>
+        </div>
+      </li>
+      <li>
+        <span class="tick">4</span>
+        <div>
+          <h3>How the coaching is delivered</h3>
+          <p>A real mobility screening before you begin, video-based correction where we watch how you move, and progress tracked against your data — not logged and forgotten.</p>
+        </div>
+      </li>
+    </ul>
+
+    <div class="funnel-cta">
+      <button type="button" class="btn" id="openLead">Watch the Free Training</button>
+      <p class="small">Free. No obligation. Takes about 12 minutes to watch.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a href="index.html" class="logo">Take Charge</a>
+    </div>
+    <p class="fine">Take Charge · Pune, India · Mobility-first coaching for women 35–60</p>
+  </div>
+</footer>
+
+<!-- ---------- Lead opt-in modal ---------- -->
+<div class="lead-overlay" id="leadOverlay" role="dialog" aria-modal="true" aria-labelledby="leadTitle">
+  <div class="lead-modal">
+    <button type="button" class="lead-close" id="closeLead" aria-label="Close">&times;</button>
+    <h2 id="leadTitle">Where should we send the training?</h2>
+    <p class="small">Enter your details and the video opens on the next page.</p>
+    <form id="leadForm" novalidate>
+      <p class="lead-error" id="leadError">Please enter your first name and a valid email.</p>
+      <div class="lead-field">
+        <label for="leadName">First name</label>
+        <input type="text" id="leadName" name="firstName" autocomplete="given-name" required>
+      </div>
+      <div class="lead-field">
+        <label for="leadEmail">Email</label>
+        <input type="email" id="leadEmail" name="email" autocomplete="email" required>
+      </div>
+      <button type="submit" class="btn">Watch the Training →</button>
+    </form>
+  </div>
+</div>
+
+<script src="nav.js"></script>
+<script>
+(function () {
+  var overlay = document.getElementById('leadOverlay');
+  var openBtn = document.getElementById('openLead');
+  var closeBtn = document.getElementById('closeLead');
+  var form = document.getElementById('leadForm');
+  var errorEl = document.getElementById('leadError');
+  var nameInput = document.getElementById('leadName');
+  var emailInput = document.getElementById('leadEmail');
+  var lastFocused = null;
+
+  function openModal() {
+    lastFocused = document.activeElement;
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    nameInput.focus();
+  }
+
+  function closeModal() {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+    if (lastFocused) { lastFocused.focus(); }
+  }
+
+  openBtn.addEventListener('click', openModal);
+  closeBtn.addEventListener('click', closeModal);
+
+  overlay.addEventListener('click', function (e) {
+    if (e.target === overlay) { closeModal(); }
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && overlay.classList.contains('open')) { closeModal(); }
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = nameInput.value.trim();
+    var email = emailInput.value.trim();
+    var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+    if (!name || !emailOk) {
+      errorEl.style.display = 'block';
+      return;
+    }
+    errorEl.style.display = 'none';
+
+    try {
+      localStorage.setItem('tc_lead_first_name', name);
+      localStorage.setItem('tc_lead_email', email);
+    } catch (err) { /* storage unavailable — continue anyway */ }
+
+    // TODO: also POST { name, email } to your email tool / CRM here before redirecting.
+
+    var params = 'name=' + encodeURIComponent(name) + '&email=' + encodeURIComponent(email);
+    window.location.href = 'funnel-vsl.html?' + params;
+  });
+})();
+</script>
+</body>
+</html>

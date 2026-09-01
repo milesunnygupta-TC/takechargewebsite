@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Your Call — The Take Charge Method</title>
+<meta name="description" content="Pick a time for your free Take Charge mobility assessment call.">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="style.css">
+<style>
+  .funnel-header .wrap { justify-content: center; }
+
+  .booking-wrap { max-width: 760px; margin: 0 auto; }
+
+  .calendly-inline-widget {
+    min-width: 320px;
+    height: 700px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--panel);
+  }
+
+  .booking-fallback { margin-top: 24px; text-align: center; }
+</style>
+</head>
+<body>
+
+<header class="site funnel-header">
+  <div class="wrap nav-row">
+    <a href="index.html" class="logo">Take Charge</a>
+  </div>
+</header>
+
+<section class="hero" style="padding-bottom: 20px;">
+  <div class="wrap">
+    <h1 style="max-width: 20ch; margin: 0 auto; text-align: center;">You're in. Now pick a time for your call.</h1>
+    <p class="hero-sub" style="max-width: 54ch; margin: 12px auto 0; text-align: center;">A quick call, not a sales pitch. We'll talk about what's been going on with your body, what you've already tried, and whether Take Charge is the right fit. If it's not, we'll tell you that too.</p>
+  </div>
+</section>
+
+<section style="padding-top: 0;">
+  <div class="wrap booking-wrap">
+
+    <!--
+      Replace data-url with your own Calendly event link.
+      The script below adds ?name= and email= from the lead form so the booking form pre-fills.
+    -->
+    <div class="calendly-inline-widget"
+         id="calendly"
+         data-url="https://calendly.com/YOUR-LINK/mobility-assessment-call"></div>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+    <div class="booking-fallback">
+      <p class="small">Prefer to message first?</p>
+      <a href="https://wa.me/91XXXXXXXXXX" class="btn-outline">Message on WhatsApp</a>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a href="index.html" class="logo">Take Charge</a>
+    </div>
+    <p class="fine">Take Charge · Pune, India · Mobility-first coaching for women 35–60</p>
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+<script>
+(function () {
+  try {
+    var qs = new URLSearchParams(window.location.search);
+    var name = qs.get('name') || localStorage.getItem('tc_lead_first_name') || '';
+    var email = qs.get('email') || localStorage.getItem('tc_lead_email') || '';
+
+    var widget = document.getElementById('calendly');
+    var base = widget.getAttribute('data-url');
+    var params = [];
+    if (name) { params.push('name=' + encodeURIComponent(name)); }
+    if (email) { params.push('email=' + encodeURIComponent(email)); }
+    if (params.length) {
+      widget.setAttribute('data-url', base + (base.indexOf('?') === -1 ? '?' : '&') + params.join('&'));
+    }
+  } catch (err) { /* no-op */ }
+})();
+</script>
+</body>
+</html>

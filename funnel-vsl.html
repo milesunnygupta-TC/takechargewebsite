@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Training — The Take Charge Method</title>
+<meta name="description" content="Watch the free training on the Take Charge mobility-first sequence, then book your call.">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="style.css">
+<style>
+  .funnel-header .wrap { justify-content: center; }
+
+  .vsl-wrap { max-width: 860px; margin: 0 auto; }
+
+  .video-frame {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 */
+    background: var(--ink);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin-bottom: 36px;
+  }
+  .video-frame iframe,
+  .video-frame video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  .video-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #E7DFD1;
+    font-family: 'Fraunces', serif;
+    font-size: 1.05rem;
+    text-align: center;
+    padding: 24px;
+  }
+
+  .vsl-cta { text-align: center; }
+  .vsl-cta .btn { font-size: 1.1rem; padding: 16px 38px; }
+  .vsl-cta .small { margin-top: 14px; }
+</style>
+</head>
+<body>
+
+<header class="site funnel-header">
+  <div class="wrap nav-row">
+    <a href="index.html" class="logo">Take Charge</a>
+  </div>
+</header>
+
+<section class="hero" style="padding-bottom: 24px;">
+  <div class="wrap">
+    <h1 style="max-width: 24ch; margin: 0 auto; text-align: center;">Watch this before you book your call.</h1>
+    <p class="hero-sub" style="max-width: 56ch; margin: 12px auto 0; text-align: center;">About 12 minutes. It walks through the exact sequence — mobility correction first, then foundational strength, then progressive overload — and why the order matters.</p>
+  </div>
+</section>
+
+<section style="padding-top: 0;">
+  <div class="wrap vsl-wrap">
+
+    <div class="video-frame">
+      <!--
+        Replace the placeholder below with your video embed. Examples:
+
+        YouTube:
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="The Take Charge Method training"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+
+        Vimeo:
+        <iframe src="https://player.vimeo.com/video/VIDEO_ID" title="The Take Charge Method training"
+                allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+
+        Self-hosted:
+        <video src="training.mp4" controls playsinline poster="training-poster.jpg"></video>
+      -->
+      <div class="video-placeholder">Your training video embeds here</div>
+    </div>
+
+    <div class="vsl-cta">
+      <a href="funnel-thank-you.html" class="btn" id="bookCall">Book Your Call</a>
+      <p class="small">A short call to see if Take Charge is the right fit — not a sales pitch.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a href="index.html" class="logo">Take Charge</a>
+    </div>
+    <p class="fine">Take Charge · Pune, India · Mobility-first coaching for women 35–60</p>
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+<script>
+(function () {
+  // Carry the lead's name/email through to the booking page so Calendly can prefill.
+  try {
+    var qs = new URLSearchParams(window.location.search);
+    var name = qs.get('name') || localStorage.getItem('tc_lead_first_name') || '';
+    var email = qs.get('email') || localStorage.getItem('tc_lead_email') || '';
+    if (name) { localStorage.setItem('tc_lead_first_name', name); }
+    if (email) { localStorage.setItem('tc_lead_email', email); }
+
+    var link = document.getElementById('bookCall');
+    var params = [];
+    if (name) { params.push('name=' + encodeURIComponent(name)); }
+    if (email) { params.push('email=' + encodeURIComponent(email)); }
+    if (params.length) { link.href = 'funnel-thank-you.html?' + params.join('&'); }
+  } catch (err) { /* no-op */ }
+})();
+</script>
+</body>
+</html>
