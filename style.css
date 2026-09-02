@@ -177,6 +177,36 @@ nav.links a:hover, nav.links a.active { color: var(--accent-deep); }
 }
 .hero-panel li:first-child { border-top: none; }
 
+/* Animated "rotating spotlight" — highlights each row in sequence.
+   4 rows x 3s each = a 12s loop. */
+.tc-spotlight-list li {
+  position: relative;
+  margin: 0 -14px;
+  padding-left: 14px;
+  padding-right: 14px;
+  border-radius: var(--radius);
+  animation: tc-spotlight 12s linear infinite;
+}
+.tc-spotlight-list li:nth-child(1) { animation-delay: 0s; }
+.tc-spotlight-list li:nth-child(2) { animation-delay: 3s; }
+.tc-spotlight-list li:nth-child(3) { animation-delay: 6s; }
+.tc-spotlight-list li:nth-child(4) { animation-delay: 9s; }
+
+@keyframes tc-spotlight {
+  0%, 25%, 100% {
+    background: transparent;
+    box-shadow: inset 0 0 0 0 var(--accent);
+    color: var(--ink);
+    transform: translateX(0);
+  }
+  4%, 21% {
+    background: var(--blush);
+    box-shadow: inset 3px 0 0 0 var(--accent);
+    color: var(--ink);
+    transform: translateX(2px);
+  }
+}
+
 /* ---------- Sections ---------- */
 
 section { padding: 64px 0; }
@@ -400,6 +430,7 @@ footer.site .fine {
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .tc-spotlight-list li { animation: none; }
 }
 
 /* Focus visibility */
