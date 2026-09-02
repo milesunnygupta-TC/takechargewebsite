@@ -102,6 +102,12 @@ nav.links a {
 
 nav.links a:hover, nav.links a.active { color: var(--accent-deep); }
 
+/* The nav "Book a Call" button — keep its light text; nav.links a would
+   otherwise override .btn's color and leave it near-invisible on the fill. */
+nav.links a.btn,
+nav.links a.btn:hover,
+nav.links a.btn.active { color: #FFFDF8; }
+
 .btn {
   display: inline-block;
   background: var(--accent);
