@@ -207,6 +207,67 @@ nav.links a:hover, nav.links a.active { color: var(--accent-deep); }
   }
 }
 
+/* ---------- Trust badge strip ---------- */
+
+.trust-strip {
+  padding: 30px 0;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.trust-badges {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.trust-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 12px 22px;
+}
+
+.trust-badge svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  color: var(--accent);
+}
+
+.trust-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+  min-width: 0;
+}
+
+.trust-num {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--ink);
+}
+
+.trust-label {
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 860px) {
+  .trust-badges { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 480px) {
+  .trust-badges { grid-template-columns: 1fr; }
+}
+
 /* ---------- Sections ---------- */
 
 section { padding: 64px 0; }
