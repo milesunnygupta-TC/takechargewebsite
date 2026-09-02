@@ -159,6 +159,7 @@ nav.links a:hover, nav.links a.active { color: var(--accent-deep); }
   height: 100%;
   max-height: 520px;
   object-fit: cover;
+  object-position: center 12%;
   background: var(--bg-alt);
 }
 
@@ -167,13 +168,20 @@ nav.links a:hover, nav.links a.active { color: var(--accent-deep); }
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 44px 22px 18px;
+  padding: 56px 22px 18px;
   font-family: 'Fraunces', serif;
   font-style: italic;
-  font-size: 1rem;
+  font-size: 1.05rem;
   line-height: 1.4;
+  text-align: left;
   color: #FBF7EF;
-  background: linear-gradient(to top, rgba(20, 15, 12, 0.78) 0%, rgba(20, 15, 12, 0.45) 45%, rgba(20, 15, 12, 0) 100%);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
+  background: linear-gradient(to top, rgba(18, 13, 10, 0.92) 0%, rgba(18, 13, 10, 0.6) 38%, rgba(18, 13, 10, 0) 100%);
+}
+
+.hero-photo figcaption span {
+  display: block;
+  max-width: 26ch;
 }
 
 .hero-scene {
