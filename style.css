@@ -490,6 +490,7 @@ section.alt { background: var(--bg-alt); }
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 28px;
+  align-items: start;
 }
 
 .story-card {
@@ -533,11 +534,25 @@ section.alt { background: var(--bg-alt); }
   border-radius: 3px;
 }
 
+/* Single combined before/after image (caption already baked into the file) */
+.story-photos.is-single {
+  display: block;
+  background: none;
+  gap: 0;
+}
+
+.story-photos.is-single img,
+.story-grid.is-preview .story-photos.is-single img {
+  height: auto;
+  object-fit: contain;
+}
+
 .story-body {
   padding: 22px 28px 26px;
 }
 
 .story-body .tag { margin-bottom: 12px; }
+.story-body .tag:last-child { margin-bottom: 0; }
 
 .story-meta {
   display: flex;
