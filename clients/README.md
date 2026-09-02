@@ -1,25 +1,26 @@
 # Client transformation photos
 
-Drop the transformation images in this folder using the exact filenames below.
-Each file is **one combined before/after image** (side-by-side pair in a single
-picture — the same graphic you post on Instagram is fine).
+Each file is **one combined before/after image** (the same graphic posted on
+Instagram). Shown on `client-stories.html` and, for three of them, on the
+homepage "Where women are starting from" strip.
 
-| Filename | Story shown on the site | Used on |
+| File | Card label | Card text |
 |---|---|---|
-| `oa-knee-bp.jpg` | Osteoarthritis trainee lost 7 kgs and improved her knee health & BP in 4 months | client-stories, home |
-| `joint-to-strength.jpg` | From joint pain to strength & freedom (Jul 2023 → Aug 2025) | client-stories, home |
-| `knee-resilience.jpg` | A journey of resilience beyond knee pain & self-belief (88.7 kg → 79.3 kg) | client-stories |
-| `rohini.jpg` | Lost 30 kgs in 24 months and managed thyroid and knee pain | client-stories, home |
-| `swati.jpg` | Dropped 8 kgs and 19+ inches with a thyroid and varicose vein condition (70 kg → 62 kg, 3 months) | client-stories |
-| `vinita.jpg` | Just wanted to go off medicine | client-stories |
-| `transformation-1.jpg` | (no caption — photo only) | client-stories |
+| `rehana.jpeg` | Rehana | Lost 17 kg — from joint pain to strength training |
+| `reshma.jpeg` | Reshma | Lost 9 kg with osteoarthritis, improved knee health in 4 months |
+| `rukhsana.jpeg` | Rukhsana | Lost 11 kg — a journey of resilience beyond knee pain |
+| `sohini.png` | Sohini | Lost 21 kg while managing thyroid and knee pain |
+| `swati.jpeg` | Swati | Lost 7 kg and 19+ inches, with a thyroid and varicose vein condition |
+| `vineeta.jpeg` | Vineeta | Lost 8 kg — came in just wanting to go off her medicine |
+| `sheetal.jpeg` | Sheetal | Lost 8 kg |
 
 ## Notes
 
-- **Format:** `.jpg` (rename `.jpeg`/`.png` to `.jpg`, or tell me to change the paths).
-- **Width:** roughly 1000–1400 px is plenty. Keep file size under ~300 KB each
-  (compress at https://squoosh.app if needed) so the pages stay fast.
-- **Names:** the site shows these stories **without names**. Filenames like
-  `rohini.jpg` are internal only — they are never shown to visitors.
-- **Consent:** only publish photos you have permission to use publicly.
-- Until a file is added, its card shows a broken-image icon; everything else works.
+- To change a photo, replace the file in this folder keeping the same name.
+- Keep each file well under ~500 KB so the pages stay fast. `sohini.png` is
+  ~1.1 MB — re-save it as a compressed `.jpg` when you get a chance (and tell me
+  to update the extension), or run it through https://squoosh.app.
+- The card text above uses the name + weight from the source filenames. Some of
+  the numbers printed *inside* the images differ (see the note sent in chat) —
+  update either the caption or the image so they match.
+- Only publish photos you have the client's permission to use publicly.
