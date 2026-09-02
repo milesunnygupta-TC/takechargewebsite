@@ -33,7 +33,7 @@
 <section style="padding-top: 10px;">
   <div class="wrap program-grid">
 
-    <div class="card">
+    <div class="card" id="reset-card">
       <span class="tag">1 Month</span>
       <h3>Take Charge Method — Reset</h3>
       <p class="small mt-0" style="font-style: italic;">Find out what's actually wrong before you spend another year guessing.</p>
@@ -48,7 +48,7 @@
       <a href="book.html" class="btn-outline">Book a Call</a>
     </div>
 
-    <div class="card flagship">
+    <div class="card flagship" id="full-card">
       <span class="ribbon">Most women choose this</span>
       <span class="tag">3 Months</span>
       <h3>Take Charge Method — Full Program</h3>
@@ -65,6 +65,45 @@
 
   </div>
   <p class="small wrap" style="margin-top: 24px;">Most women who start with Reset continue directly into the Full Program once mobility improves — this is the program built for lasting change, not a quick fix.</p>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Not sure which one to start with?</h2>
+      <p>Two quick questions — we'll point you to the right starting point.</p>
+    </div>
+
+    <div class="quiz">
+      <form id="quizForm" novalidate>
+        <fieldset class="quiz-q">
+          <legend>How long have you had this pain or limitation?</legend>
+          <label class="quiz-opt"><input type="radio" name="q1" value="0"><span>Less than 6 months</span></label>
+          <label class="quiz-opt"><input type="radio" name="q1" value="1"><span>6 months to 2 years</span></label>
+          <label class="quiz-opt"><input type="radio" name="q1" value="1"><span>More than 2 years</span></label>
+          <label class="quiz-opt"><input type="radio" name="q1" value="2"><span>No pain — I just want to get stronger</span></label>
+        </fieldset>
+
+        <fieldset class="quiz-q">
+          <legend>What's your main goal right now?</legend>
+          <label class="quiz-opt"><input type="radio" name="q2" value="0"><span>Understand what's going on and get out of pain</span></label>
+          <label class="quiz-opt"><input type="radio" name="q2" value="2"><span>Build strength that lasts for the long term</span></label>
+          <label class="quiz-opt"><input type="radio" name="q2" value="2"><span>Both — fix the issue and get properly strong</span></label>
+        </fieldset>
+
+        <button type="submit" class="btn">See my recommendation</button>
+        <p class="quiz-error small" id="quizError" hidden>Please answer both questions.</p>
+      </form>
+
+      <div class="quiz-result card" id="quizResult" hidden aria-live="polite">
+        <span class="tag" id="quizResultTag"></span>
+        <h3 id="quizResultTitle"></h3>
+        <p id="quizResultBody"></p>
+        <a href="#reset-card" class="btn" id="quizResultJump">See the plan</a>
+        <button type="button" class="btn-outline" id="quizRetake">Start over</button>
+      </div>
+    </div>
+  </div>
 </section>
 
 <footer class="site">
@@ -84,5 +123,69 @@
 </footer>
 
 <script src="nav.js"></script>
+<script>
+(function () {
+  var form = document.getElementById('quizForm');
+  if (!form) { return; }
+
+  var errEl = document.getElementById('quizError');
+  var result = document.getElementById('quizResult');
+  var tagEl = document.getElementById('quizResultTag');
+  var titleEl = document.getElementById('quizResultTitle');
+  var bodyEl = document.getElementById('quizResultBody');
+  var jumpEl = document.getElementById('quizResultJump');
+  var retakeBtn = document.getElementById('quizRetake');
+
+  var plans = {
+    reset: {
+      title: 'Start with the Reset',
+      body: 'Give it a month to find out what’s actually going on and get the correction phase done properly before committing further. Most women move into the Full Program from here once their mobility improves.',
+      target: 'reset-card'
+    },
+    full: {
+      title: 'Go straight to the Full Program',
+      body: 'You’re ready for the complete sequence — mobility correction, then foundational strength, then progressive overload — across two full review cycles. This is the one built for lasting change.',
+      target: 'full-card'
+    }
+  };
+
+  function flash(id) {
+    var card = document.getElementById(id);
+    if (!card) { return; }
+    document.querySelectorAll('.card.quiz-target').forEach(function (c) {
+      c.classList.remove('quiz-target');
+    });
+    void card.offsetWidth; // restart the animation
+    card.classList.add('quiz-target');
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var q1 = form.querySelector('input[name="q1"]:checked');
+    var q2 = form.querySelector('input[name="q2"]:checked');
+
+    if (!q1 || !q2) { errEl.hidden = false; return; }
+    errEl.hidden = true;
+
+    var score = parseInt(q1.value, 10) + parseInt(q2.value, 10);
+    var plan = score >= 2 ? plans.full : plans.reset;
+
+    tagEl.textContent = 'Your recommended start';
+    titleEl.textContent = plan.title;
+    bodyEl.textContent = plan.body;
+    jumpEl.setAttribute('href', '#' + plan.target);
+    jumpEl.onclick = function () { flash(plan.target); };
+
+    result.hidden = false;
+    result.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
+  retakeBtn.addEventListener('click', function () {
+    form.reset();
+    result.hidden = true;
+    form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+})();
+</script>
 </body>
 </html>
