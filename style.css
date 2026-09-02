@@ -69,12 +69,21 @@ header.site {
 }
 
 .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   font-family: 'Fraunces', serif;
   font-size: 1.3rem;
   font-weight: 600;
   color: var(--ink);
   text-decoration: none;
   letter-spacing: 0.01em;
+}
+
+.logo .logo-mark {
+  display: block;
+  height: 30px;
+  width: auto;
 }
 
 nav.links {

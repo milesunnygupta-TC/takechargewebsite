@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Take Charge">
+  <rect width="200" height="200" rx="30" fill="#000000"/>
+  <g transform="translate(14 42) scale(0.9)" fill="#E8863C">
+    <rect x="8" y="8" width="86" height="22"/>
+    <rect x="8" y="8" width="11" height="34"/>
+    <rect x="83" y="8" width="11" height="34"/>
+    <rect x="41" y="8" width="20" height="112"/>
+    <rect x="31" y="108" width="40" height="12"/>
+    <path d="M170.6 31.7 A54 54 0 1 0 170.6 98.3 L154.8 85.9 A34 34 0 1 1 154.8 44.1 Z"/>
+  </g>
+</svg>
