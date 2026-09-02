@@ -740,6 +740,7 @@ footer.site .fine {
 
 @media (max-width: 860px) {
   .hero-grid { grid-template-columns: 1fr; }
+  .hero-photo { order: -1; }
   .hero-photo img { max-height: 440px; }
   .three-col { grid-template-columns: 1fr; }
   .program-grid { grid-template-columns: 1fr; }
