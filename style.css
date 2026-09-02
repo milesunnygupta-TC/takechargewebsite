@@ -565,8 +565,24 @@ section.alt { background: var(--bg-alt); }
   padding-left: 16px;
 }
 
+/* 3-up preview strip (homepage) */
+.story-grid.is-preview { grid-template-columns: repeat(3, 1fr); }
+.story-grid.is-preview .story-photos img { height: 176px; }
+
+.story-preview-more { margin: 24px 0 0; }
+
+.link-more {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 0.97rem;
+  color: var(--accent-deep);
+  text-decoration: none;
+}
+.link-more:hover { text-decoration: underline; }
+
 @media (max-width: 860px) {
-  .story-grid { grid-template-columns: 1fr; }
+  .story-grid,
+  .story-grid.is-preview { grid-template-columns: 1fr; }
 }
 
 /* ---------- Pull quote ---------- */
