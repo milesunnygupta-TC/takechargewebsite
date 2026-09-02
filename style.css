@@ -195,15 +195,15 @@ nav.links a:hover, nav.links a.active { color: var(--accent-deep); }
 @keyframes tc-spotlight {
   0%, 25%, 100% {
     background: transparent;
-    box-shadow: inset 0 0 0 0 var(--accent);
+    box-shadow: inset 0 0 0 0 var(--accent-deep);
     color: var(--ink);
     transform: translateX(0);
   }
-  4%, 21% {
-    background: var(--blush);
-    box-shadow: inset 3px 0 0 0 var(--accent);
-    color: var(--ink);
-    transform: translateX(2px);
+  3%, 22% {
+    background: var(--panel);
+    box-shadow: inset 4px 0 0 0 var(--accent-deep), 0 6px 18px rgba(43, 36, 32, 0.14);
+    color: var(--accent-deep);
+    transform: translateX(4px);
   }
 }
 
