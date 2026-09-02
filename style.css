@@ -318,6 +318,7 @@ section.alt { background: var(--bg-alt); }
   z-index: 2;
 }
 
+/* Gray track between steps */
 .seq-item:not(:last-child)::before {
   content: '';
   position: absolute;
@@ -326,6 +327,26 @@ section.alt { background: var(--bg-alt); }
   bottom: -48px;
   width: 2px;
   background: var(--border);
+}
+
+/* Accent fill drawn over the track — grown by IntersectionObserver on scroll */
+.seq-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 25px;
+  top: 52px;
+  bottom: -48px;
+  width: 2px;
+  background: var(--accent);
+  transform: scaleY(0);
+  transform-origin: top center;
+  transition: transform 0.7s ease;
+}
+
+.seq-item.line-filled::after { transform: scaleY(1); }
+
+@media (prefers-reduced-motion: reduce) {
+  .seq-item:not(:last-child)::after { transition: none; }
 }
 
 .seq-item h3 { margin-bottom: 8px; }
