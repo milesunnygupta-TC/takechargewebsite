@@ -191,6 +191,62 @@ nav.links a.btn.active { color: #FFFDF8; }
   max-width: 26ch;
 }
 
+/* Rotating condition ticker — small, above the hero scene line */
+.cond-ticker {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.cond-label { color: var(--ink-soft); }
+
+.cond-rotator {
+  position: relative;
+  display: inline-block;
+  height: 1.15em;
+  min-width: 15ch;
+  perspective: 240px;
+}
+
+.cond-rotator > span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  white-space: nowrap;
+  color: var(--accent-deep);
+  opacity: 0;
+  transform-origin: 50% 0;
+  animation: cond-flip 20s linear infinite;
+}
+
+.cond-rotator > span:nth-child(1) { animation-delay: 0s; }
+.cond-rotator > span:nth-child(2) { animation-delay: 2.5s; }
+.cond-rotator > span:nth-child(3) { animation-delay: 5s; }
+.cond-rotator > span:nth-child(4) { animation-delay: 7.5s; }
+.cond-rotator > span:nth-child(5) { animation-delay: 10s; }
+.cond-rotator > span:nth-child(6) { animation-delay: 12.5s; }
+.cond-rotator > span:nth-child(7) { animation-delay: 15s; }
+.cond-rotator > span:nth-child(8) { animation-delay: 17.5s; }
+
+@keyframes cond-flip {
+  0%    { opacity: 0; transform: translateY(4px) rotateX(-90deg); }
+  1.6%  { opacity: 1; transform: translateY(0) rotateX(0deg); }
+  11%   { opacity: 1; transform: translateY(0) rotateX(0deg); }
+  12.5% { opacity: 0; transform: translateY(-4px) rotateX(90deg); }
+  100%  { opacity: 0; transform: translateY(-4px) rotateX(90deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cond-rotator > span { animation: none; }
+  .cond-rotator > span:nth-child(1) { opacity: 1; }
+}
+
 .hero-scene {
   font-family: 'Fraunces', serif;
   font-style: italic;
