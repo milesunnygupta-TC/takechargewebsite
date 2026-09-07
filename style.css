@@ -751,6 +751,57 @@ section.alt { background: var(--bg-alt); }
   max-width: 52ch;
 }
 
+/* ---------- About: founder portrait + story ---------- */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 52px;
+  align-items: start;
+}
+
+.about-portrait {
+  margin: 0;
+  position: sticky;
+  top: 104px;
+}
+
+.about-portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 14px 40px rgba(43, 36, 32, 0.12);
+  background: var(--bg-alt);
+}
+
+.about-portrait figcaption {
+  margin-top: 12px;
+  font-family: 'Fraunces', serif;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+}
+
+.about-story {
+  max-width: 62ch;
+}
+
+.about-story p:first-child {
+  margin-top: 0;
+}
+
+@media (max-width: 860px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .about-portrait {
+    position: static;
+    max-width: 300px;
+  }
+}
+
 /* ---------- FAQ ---------- */
 
 details.faq-item {
