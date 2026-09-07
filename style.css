@@ -262,7 +262,17 @@ nav.links a.btn.active { color: #FFFDF8; }
   font-size: 1.12rem;
   color: var(--ink-soft);
   max-width: 46ch;
-  margin-bottom: 32px;
+  margin-bottom: 20px;
+}
+
+.hero-reassure {
+  font-size: 0.98rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  max-width: 44ch;
+  margin: 0 0 30px;
+  padding-left: 14px;
+  border-left: 2px solid var(--blush);
 }
 
 .hero-panel {
