@@ -996,6 +996,40 @@ footer.site .fine {
 .cta-band .btn { background: #F4F1E6; color: var(--green); }
 .cta-band .btn:hover { background: #FFFFFF; }
 
+/* ---------- Trusted-by strip ---------- */
+
+.trusted-strip { padding: 4px 0 48px; }
+
+.trusted-label {
+  margin: 0 0 18px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.trusted-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px 28px;
+  list-style: none;
+  margin: 0;
+  padding: 22px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.trusted-list li {
+  font-variant: small-caps;
+  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+}
+
 /* ---------- Utility ---------- */
 
 .center { text-align: center; }
