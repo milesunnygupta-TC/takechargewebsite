@@ -1129,6 +1129,12 @@ footer.site .fine {
   width: auto;
 }
 
+/* Schindler's mark is a stacked icon+wordmark, so at the shared height
+   it reads visually smaller than the wider landscape logos next to it. */
+.trusted-logo--lg {
+  height: 46px;
+}
+
 /* ---------- Utility ---------- */
 
 .center { text-align: center; }
