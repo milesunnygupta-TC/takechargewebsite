@@ -1254,3 +1254,115 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   .whatsapp-float { transition: none; }
 }
+
+/* ---------- Your Journey With Us (method.html) ----------
+   Desktop: 7 stops in a horizontal zigzag on a shared line.
+   Filled --accent circles (vs. the outlined .seq-num above them)
+   keep this roadmap visually distinct from the 3-phase sequence. */
+
+.journey-road {
+  display: flex;
+  align-items: center;
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 130px 0;
+}
+
+.journey-road::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 3px;
+  background: rgba(168, 85, 46, 0.3);
+}
+
+.journey-stop {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.journey-num {
+  position: relative;
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #FFFDF8;
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.4);
+  opacity: 0;
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.4s ease;
+}
+
+.journey-num.is-visible {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.journey-text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  text-align: center;
+}
+
+.journey-stop:nth-child(odd) .journey-text { bottom: calc(100% + 22px); }
+.journey-stop:nth-child(even) .journey-text { top: calc(100% + 22px); }
+
+.journey-text h3 { font-size: 0.98rem; margin-bottom: 6px; }
+.journey-text p { font-size: 0.83rem; color: var(--ink-soft); margin: 0; }
+
+@media (max-width: 860px) {
+  .journey-road {
+    display: block;
+    padding: 0;
+  }
+  .journey-road::before { display: none; }
+
+  .journey-stop {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 20px;
+    padding-bottom: 36px;
+  }
+  .journey-stop:last-child { padding-bottom: 0; }
+
+  .journey-stop:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    left: 21px;
+    top: 44px;
+    bottom: -28px;
+    width: 2px;
+    background: var(--border);
+  }
+
+  .journey-text {
+    position: static;
+    transform: none;
+    width: auto;
+    text-align: left;
+  }
+  .journey-text h3 { font-size: 1.05rem; }
+  .journey-text p { font-size: 0.92rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .journey-num {
+    transition: none;
+    transform: scale(1);
+    opacity: 1;
+  }
+}
