@@ -1127,14 +1127,6 @@ footer.site .fine {
   display: block;
   height: 30px;
   width: auto;
-  filter: grayscale(100%);
-  opacity: 0.7;
-  transition: opacity 0.15s ease, filter 0.15s ease;
-}
-
-.trusted-logo:hover {
-  filter: grayscale(0%);
-  opacity: 1;
 }
 
 /* ---------- Utility ---------- */
