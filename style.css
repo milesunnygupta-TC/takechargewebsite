@@ -1035,6 +1035,32 @@ footer.site .fine {
   .stats-bar { grid-template-columns: 1fr; }
 }
 
+/* ---------- Photo strip (Real Influencers) ---------- */
+
+.photo-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.photo-strip img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-alt);
+}
+
+@media (max-width: 860px) {
+  .photo-strip { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .photo-strip { grid-template-columns: 1fr; }
+}
+
 /* ---------- Trusted-by strip ---------- */
 
 .trusted-strip { padding: 4px 0 48px; }
