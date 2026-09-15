@@ -996,6 +996,45 @@ footer.site .fine {
 .cta-band .btn { background: #F4F1E6; color: var(--green); }
 .cta-band .btn:hover { background: #FFFFFF; }
 
+/* ---------- Stats bar (large Fraunces number + small label) ---------- */
+
+.stats-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.stat-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.stat-num {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: clamp(2.1rem, 4vw, 2.8rem);
+  line-height: 1;
+  color: var(--accent-deep);
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  max-width: 22ch;
+}
+
+@media (max-width: 860px) {
+  .stats-bar { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .stats-bar { grid-template-columns: 1fr; }
+}
+
 /* ---------- Trusted-by strip ---------- */
 
 .trusted-strip { padding: 4px 0 48px; }
