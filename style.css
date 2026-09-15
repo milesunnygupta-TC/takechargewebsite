@@ -837,6 +837,35 @@ section.alt { background: var(--bg-alt); }
 .story-grid.is-preview { grid-template-columns: repeat(3, 1fr); }
 .story-grid.is-preview .story-photos img { height: 176px; }
 
+/* 5-up row (corporate-wellness.html transformations) — narrower cards,
+   so the photo, tag and quote all scale down to fit one horizontal line. */
+.corp-transformations .story-grid {
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+.corp-transformations .story-photos.is-single img {
+  max-height: 280px;
+}
+.corp-transformations .story-body {
+  padding: 16px 16px 20px;
+}
+.corp-transformations .story-body .tag {
+  font-size: 0.72rem;
+  padding: 3px 10px;
+}
+.corp-transformations .story-quote {
+  font-size: 0.85rem;
+  padding-left: 12px;
+}
+
+@media (max-width: 860px) {
+  .corp-transformations .story-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 560px) {
+  .corp-transformations .story-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
 .story-preview-more { margin: 24px 0 0; }
 
 .link-more {
