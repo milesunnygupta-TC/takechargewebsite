@@ -1061,6 +1061,32 @@ footer.site .fine {
   .photo-strip { grid-template-columns: 1fr; }
 }
 
+/* ---------- Flagship promo (corporate-wellness.html) ----------
+   Scoped so the shared .card.flagship / .ribbon / .tag used on
+   programs.html are left exactly as they were. */
+
+.flagship-promo .card.flagship {
+  border-width: 3px;
+  box-shadow: 0 18px 46px rgba(43, 36, 32, 0.16);
+}
+
+.flagship-promo .ribbon {
+  font-size: 1rem;
+  padding: 9px 24px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  box-shadow: 0 4px 14px rgba(43, 36, 32, 0.28);
+}
+
+.flagship-promo .tag {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 7px 18px;
+  margin-bottom: 20px;
+}
+
 /* ---------- Trusted-by strip ---------- */
 
 .trusted-strip { padding: 4px 0 48px; }
